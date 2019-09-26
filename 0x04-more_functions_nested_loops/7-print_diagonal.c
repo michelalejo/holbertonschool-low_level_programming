@@ -1,17 +1,27 @@
 #include "holberton.h"
 /**
- * print_line - function that prints a straight line
- * @n: takes in an integer
+ * print_square - prints perfect square
+ * @size: size to print
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
-	char r = '_';
-	int f = n;
+	char r = 92;
+	int f, b;
 
-	if (n > 0)
+	if (n <= 0)
 	{
-		for (; f > 0; f--)
-			_putchar(r);
+		_putchar('\n');
 	}
-	_putchar('\n');
+	else
+	{
+		for (f = 1; f <= n; f++)
+		{
+			for (b = 2; b <= f; b++)
+			{
+				_putchar(32);
+			}
+			_putchar(r);
+			_putchar('\n');
+		}
+	}
 }
