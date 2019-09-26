@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * print_line - function that prints a straight line
- * @n: takes in an integer
+ * print_square - prints perfect square
+ * @size: size to print
  */
 void print_square(int size)
 {
@@ -12,7 +12,7 @@ void print_square(int size)
 	{
 		_putchar('\n');
 	}
-	else 
+	else
 	{
 		for (f = size; f > 0; f--)
 		{
