@@ -8,7 +8,11 @@ void print_square(int size)
 	char r = '#';
 	int f = size;
 
-	if (f > 0)
+	if (f < 0)
+	{
+		_putchar('\n');
+	}
+	else
 	{
 		for (; f > 0; f--)
 			_putchar(r);
