@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * swap_int - Write a function that swaps the values of two integers.
- * @a: take an pointer
- * @b: take an pointer
+ * _strlen - Write a function that returns the length of a string.
+ * @s: take an pointer
+ * Return: the index of the array
  */
 int _strlen(char *s)
 {
