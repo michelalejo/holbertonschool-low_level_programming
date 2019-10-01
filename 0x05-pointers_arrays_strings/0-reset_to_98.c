@@ -1,9 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * reset_to_98 - set pointer n to 98.
- *
- * @void: no return
+ * reset_to_98 - unction that takes a pointer to an int
+ * @n: take an pointer
  */
 void reset_to_98(int *n)
 {
