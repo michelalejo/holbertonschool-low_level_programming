@@ -1,28 +1,30 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * puts2 - Write a function that prints every other character of a string
- * @str: take an pointer
+ * puts_half -  prints half of a string, followed by a new line
+ * @str: char str
  */
 void puts_half(char *str)
 {
-	int a, b;
+	int i;
 
-	for (b = 0; str[b] != '\0'; a++)
+	i = 0;
+	for (; str[i] != '\0';)
 	{
+		i++;
 	}
-	b--;
-	if (b % 2 == 0)
+	if (i % 2 == 0)
 	{
-		n = b / 2;
+		i = (i - 1) / 2;
 	}
 	else
 	{
-		n = b + 1 / 2;
+		i = i / 2;
 	}
-	for (a = n; str[a] <= b; a++)
+	for (i = i + 1; str[i] != '\0';)
 	{
-			_putchar(str[a]);
+		_putchar(str[i]);
+		i++;
 	}
 	_putchar('\n');
 }
