@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * _puts - writes a string to stdout up to but not including the null character.
+ * _puts - writes a string to stdout up, do not include the nulls.
  * @str: str have the string to print.
  * Return: the index of the array
  */
