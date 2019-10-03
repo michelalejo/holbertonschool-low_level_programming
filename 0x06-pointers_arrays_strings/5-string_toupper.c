@@ -2,7 +2,7 @@
 /**
  * string_toupper -function that changes all lowercase letters of a string
  * to uppercase.
- * @s: take an string
+ * @a: take an string
  * Return: the string
  */
 char *string_toupper(char *a)
@@ -15,6 +15,6 @@ char *string_toupper(char *a)
 		{
 			a[b] = a[b] - 32;
 		}
-	}		
+	}
 	return (a);
 }
