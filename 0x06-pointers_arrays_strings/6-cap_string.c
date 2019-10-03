@@ -1,39 +1,28 @@
 #include "holberton.h"
 /**
  * cap_string - capitalizes all words of a string
- * @s: takes in a string
- * Return: s, the string
+ * @str: character string
+ *
+ * Return: string with each word capitalized
  */
-char *cap_string(char *s)
+
+char *cap_string(char *str)
 {
-	int i;
+	int i = 0;
 
-	if (s[0] >= 'a' && s[0] <= 'z')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		s[0] -= 32;
+		if (i == 0)
 
-		for (i = 0; s[i] != '\0'; i++)
 		{
-			switch (s[i])
+			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-			case ',':
-			case ';':
-			case '.':
-			case '!':
-			case '?':
-			case '"':
-			case '(':
-			case ')':
-			case '{':
-			case '}':
-			case ' ':
-			case '\n':
-			case '\t':
-
-				if (s[i + 1] > 96 && s[i + 1] < 123)
-					s[i + 1] -= 32;
+				str[i] =- 32;
 			}
+			else if (str[i - 1] == 32||'\t'||'\n'||','||';'||'.'||'!'||'?'||
+				 '"'||'('||')'||'{'||'}')
+				str[i] =- 32;
 		}
 	}
-	return (s);
+	return (str);
 }
