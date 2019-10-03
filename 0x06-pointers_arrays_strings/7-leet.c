@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
  * leet - mozart do the music for allte people
-(* a blank line
-*@s: this parameter is the string to encrypt
-* Description: mozart do the music for all the people)?
-(* section header: the header of this function is holberton.h)*
-* Return: this return a char.
-*/
+ * a blank line
+ * @s: this parameter is the string to encrypt
+ * Description: mozart do the music for all the people)?
+ *(section header: the header of this function is holberton.h)*
+ * Return: this return a char.
+ */
 char *leet(char *s)
 {
 	int i, j;
@@ -26,3 +26,4 @@ char *leet(char *s)
 		i++;
 	}
 	return (s);
+}
