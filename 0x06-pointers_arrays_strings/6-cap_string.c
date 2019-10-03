@@ -1,28 +1,32 @@
 #include "holberton.h"
 /**
- * cap_string - capitalizes all words of a string
- * @str: character string
- *
- * Return: string with each word capitalized
+ * cap_string - function that capitalizes all words of a string
+ * @p: pointer argumnet
+ * Description: capitalizes all words of a string
+ * Return: pointer p
  */
-
-char *cap_string(char *str)
+char *cap_string(char *p)
 {
-	int i = 0;
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (i == 0)
-
+	int i;
+        i = 0;
+        while (p[i] != '\0')
+        {
+		if (i == 0 && p[i] >= 97 && p[i] <= 122)
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] -= 32;
-			}
-			else if (str[i - 1] == 32||'\t'||'\n'||','||';'||'.'||'!'||'?'||
-				 '"'||'('||')'||'{'||'}')
-				str[i] -= 32;
+			p[i] = p[i] - 32;
 		}
-	}
-	return (str);
+                if (p[i] >= 97 && p[i] <= 122
+                    && (p[i-1] == 32 || p[i-1] == ','
+                    || p[i-1] == ';'|| p[i-1] == '.'
+                    || p[i-1] == '!'|| p[i-1] == '?'
+                    || p[i-1] == '"'|| p[i-1] == '('
+                    || p[i-1] == ')'|| p[i-1] == '{'
+                    || p[i-1] == '}'|| p[i-1] == '\n'
+                        || p[i-1] == '\t'))
+                {
+			p[i] = p[i] - 32;
+                }
+                i++;
+        }
+        return(p);
 }
