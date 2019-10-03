@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
- * reverse_array - reverses an array of integers
- * @a: takes in an array
- * @n: takes in an integer
+ * string_toupper -function that changes all lowercase letters of a string
+ * to uppercase.
+ * @s: take an string
+ * Return: the string
  */
 char *string_toupper(char *a)
 {
