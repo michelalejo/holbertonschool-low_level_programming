@@ -17,11 +17,11 @@ char *cap_string(char *str)
 		{
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				str[i] =- 32;
+				str[i] -= 32;
 			}
 			else if (str[i - 1] == 32||'\t'||'\n'||','||';'||'.'||'!'||'?'||
 				 '"'||'('||')'||'{'||'}')
-				str[i] =- 32;
+				str[i] -= 32;
 		}
 	}
 	return (str);
