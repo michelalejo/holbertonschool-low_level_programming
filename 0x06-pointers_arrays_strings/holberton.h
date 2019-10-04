@@ -14,6 +14,8 @@ char *leet(char *);
 char *rot13(char *);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+int _strlen(char *s);
 void print_buffer(char *b, int size);
+void print_line(char *b, int position, int n);
 
 #endif /* HOLBERTON_H */
