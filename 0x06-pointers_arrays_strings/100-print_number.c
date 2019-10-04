@@ -1,42 +1,45 @@
 #include "holberton.h"
+
 /**
- * print_number - print numbers out
- * @n: takes in an integer
+ * print_number - prints the number
+ * @n: number to print
+ * Return:none
  */
+
 void print_number(int n)
 {
-	int i, j, div;
-	int x = n;
+	int i, digit, place, fake_bool;
+	long j;
+	char num[1000];
 
-	div = 10;
-
-	if (n < 0)
+	place = 0;
+	fake_bool = 0;
+	j = n;
+	if (j < 0)
 	{
-		x = x * -1;
-		_putchar('-');
+		j = j * -1;
+		fake_bool = 1;
 	}
-	else if (n == 0)
+	while ((j / 10) != 0)
 	{
-		_putchar('0');
+		digit = j % 10;
+		num[place] = digit;
+		place++;
+		j = j / 10;
 	}
-	else
+	num[place] = j;
+	if (fake_bool == 1)
 	{
-		for (i = 1; x > 0; i++)
+		place++;
+		num[place] = '-';
+	}
+	for (i = place; i >= 0; i--)
+	{
+		if (num[i] != '-')
 		{
-			x /= 10;
+			_putchar(num[i] + '0');
 		}
-		for (j = 0; j < i - 1; j++)
-		{
-			div *= 10;
-
-
-			while (div >= 1)
-			{
-				_putchar(n / div + '0');
-				n = n % div;
-				div = div / 10;
-
-			}
-		}
+		else
+			_putchar('-');
 	}
 }
