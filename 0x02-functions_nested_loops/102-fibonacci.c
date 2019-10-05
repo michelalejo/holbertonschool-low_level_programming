@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "holberton.h"
-
 /**
  *main - print fibo
  *
@@ -15,7 +14,7 @@ int main(void)
 	j = 1;
 	for (alv = 0; alv < 50; alv++)
 	{
-		sum = i + j;
+		xD = i + j;
 		i = j;
 		j = xD;
 		if (alv != 49)
