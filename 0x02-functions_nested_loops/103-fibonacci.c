@@ -7,21 +7,21 @@
 
 int main(void)
 {
-	long i, j, even_sum, current_sum, max;
+	long i, nel, a, b, xD;
 
 	i = 1;
-	j = 2;
-	max = 4000000;
-	even_sum = 0;
-	current_sum = 0;
-	while (i < max && j < max)
+	nel = 2;
+	xD = 4000000;
+	a = 0;
+	b = 0;
+	while (i < c && nel < xD)
 	{
-		if ((j % 2) == 0)
-			even_sum += j;
-		current_sum = i + j;
-		i = j;
-		j = current_sum;
+		if ((nel % 2) == 0)
+			a += nel;
+		b = i + nel;
+		i = nel;
+		nel = b;
 	}
-	printf("%ld\n", even_sum);
+	printf("%ld\n", a);
 	return (0);
 }
