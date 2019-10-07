@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _strpbrk - Write a function that gets the length of a prefix substring.
  * @s: Pointer
