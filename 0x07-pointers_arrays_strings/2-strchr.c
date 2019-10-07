@@ -10,7 +10,7 @@ char *_strchr(char *s, char c)
 	do {
 		if (*s == c)
 		{
-			return ((char *)s);
+			return (s);
 		}
 	}
 	while (*s++)
