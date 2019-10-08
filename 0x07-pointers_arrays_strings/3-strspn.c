@@ -1,9 +1,8 @@
 #include "holberton.h"
-
 /**
  * _strspn - Write a function that gets the length of a prefix substring.
- * @s: pointer
- * @accept: pointer
+ * @s: Pointer
+ * @accept: Pointer
  * Return: 0
  */
 unsigned int _strspn(char *s, char *accept)
