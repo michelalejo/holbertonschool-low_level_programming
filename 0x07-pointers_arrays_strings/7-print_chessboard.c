@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _strpbrk - Write a function that gets the length of a prefix substring.
  * @s: Pointer
@@ -12,7 +11,7 @@ void print_chessboard(char (*a)[8])
 
 	for (i = 0; a[i] < 8; i++)
 	{
-		for (j = 0; a[j] < 8; j++)
+		for (j = 0; j < 8; j++)
 		{
 			_putchar(a[i][j]);
 		}
