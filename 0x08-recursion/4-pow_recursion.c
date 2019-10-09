@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- *  factorial - Function that returns the factorial of a given number.
- * @n: Pointer with the strings.
+ * _pow_recursion - Function to returns the value of x raised to the power of y
+ * @x: Pointer with the strings.
+ * @y: Pointer with the strings.
  * Return: Returns the factorial of a given number.
  */
 int _pow_recursion(int x, int y)
