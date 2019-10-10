@@ -1,20 +1,20 @@
 #include "holberton.h"
 /**
  * _sqrt_recursion - Function that returns the natural square root of a number.
- * @n: takes in an integer
- * Return: a starting number and n to compare
+ * @n: Takes in an integer
+ * Return: Starting number and n to compare
  */
 int _sqrt_recursion(int n)
 {
-	return (_sqrt_recursion1(1, n));
+	return (find(1, n));
 }
 /**
- * _sqrt_recursion1 - Find square root
- * @x: takes in an integer
- * @y: takes in an integer
- * Return: return x compared to y
+ * find - Find square root.
+ * @x: An integer.
+ * @y: An integer.
+ * Return: Return x compared with y.
  */
-int _sqrt_recursion1(int x, int y)
+int find(int x, int y)
 {
 	if (x * x == y)
 	{
@@ -26,6 +26,6 @@ int _sqrt_recursion1(int x, int y)
 	}
 	else
 	{
-		return (_sqrt_recursion1(x += 1, y));
+		return (find(x += 1, y));
 	}
 }
