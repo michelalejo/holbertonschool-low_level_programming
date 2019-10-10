@@ -1,31 +1,29 @@
 #include "holberton.h"
 /**
- * _sqrt_recursion - Function that returns the natural square root of a number.
- * @n: Takes in an integer
- * Return: Starting number and n to compare
+ * _sqrt_recursion - calculate the sqare root of a number
+ * @n: integer
+ * Return: result of the sqare root of n
  */
 int _sqrt_recursion(int n)
 {
-	return (find(1, n));
+	int result = 0;
+	result = _find(n, 0);
+	return (result);
 }
+
 /**
- * find - Find square root.
- * @x: An integer.
- * @y: An integer.
- * Return: Return x compared with y.
+ * _find - calculate the sqare root of a number
+ * @n: integer
+ * @factor:integer
+ * Return: result of the sqare root of n
  */
-int find(int x, int y)
+int _find(int n, int factor)
 {
-	if (x * x == y)
-	{
-		return (x);
-	}
-	else if (x * x > y)
-	{
+	int result = 0;
+	if (factor * factor > n)
 		return (-1);
-	}
-	else
-	{
-		return (find(x += 1, y));
-	}
+	if (factor * factor == n)
+		return (factor);
+	result = _find(n, factor + 1);
+	return (result);
 }
