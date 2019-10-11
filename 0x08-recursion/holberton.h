@@ -13,6 +13,8 @@ int _find(int n,int xD);
 int is_prime_number(int n);
 int _find1(int n, int find2);
 int is_palindrome(char *s);
+int xD(char *s);
+int recursion1(char *s, int l);
 int wildcmp(char *s1, char *s2);
 
 #endif /* HOLBERTON_H */
