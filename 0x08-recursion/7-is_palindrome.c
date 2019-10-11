@@ -14,7 +14,7 @@ int is_palindrome(char *s)
 	return (recursion1(s, alv));
 }
 /**
- * recursion - string 
+ * xD - string lengths
  * @s: takes in string.
  * Return: return the length of the string.
  */
