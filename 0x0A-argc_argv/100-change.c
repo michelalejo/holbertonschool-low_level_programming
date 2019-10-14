@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - returns (0)
- * @argc: int argc
- * @argv: char argv
- * Return: Always 0.
+ * main - Returns 0.
+ * @argc: Argc.
+ * @argv: Argv.
+ * Return: Returns 0.
  */
 int main(int argc, char *argv[])
 {
-	int i, j, total, fijo, count;
-	int dev[] = {25, 10, 5, 2, 1};
+	int i, j, t, xD, alv;
+	int f[] = {25, 10, 5, 2, 1};
 
-	count = 0;
+	alv = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -19,21 +19,21 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		fijo = atoi(argv[1]);
-		total = fijo;
-		if (total < 0)
+		xD = atoi(argv[1]);
+		t = xD;
+		if (t < 0)
 		{
 			printf("0\n");
 			return (0);
 		}
 		j = 0;
-		for (i = 0; i < fijo;)
+		for (i = 0; i < xD;)
 		{
-			if ((total - dev[j]) >= 0)
+			if ((t - f[j]) >= 0)
 			{
-				total = total - dev[j];
-				i = i + dev[j];
-				count++;
+				t = t - f[j];
+				i = i + f[j];
+				alv++;
 			}
 			else
 			{
@@ -41,6 +41,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	printf("%d\n", count);
+	printf("%d\n", alv);
 	return (0);
 }
