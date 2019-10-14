@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- */
+* main - Multiplies two numbers.
+* @argc: Numbers of paremeters.
+* @argv: The parameter to put in the cmd.
+* Return: return 0/1.
+*/
 int main(int argc, char *argv[])
 {
 	int i, mul = 1;
