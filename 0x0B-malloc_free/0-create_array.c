@@ -8,21 +8,21 @@
  **/
 char *create_array(unsigned int size, char c)
 {
-	int j;
+	unsigned int j;
 	char *i;
 
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	i = malloc(sizeof(char) * c);
+	i = malloc(sizeof(char) * size);
 	if (i == NULL)
         {
                 return (NULL);
         }
 	for (j = 0; j < size; j++)
 	{
-		(i + j) = c;
+		*(i + j) = c;
 	}
 	return (i);
 }
