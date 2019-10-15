@@ -2,28 +2,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * create_array - Function that creates an array of chars.
- * @size:  Size of the array.
- * @c: Value of the array.
- * Return: Return NULL if is 0/fail.
+ * _strdup - Function that returns a pointer to a newly allocated in memory.
+ * @str:  Size of the array.
+ * Return: Return NULL if str and s is null
  **/
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-	unsigned int j;
-	char *i;
+	int j, i;
+	char *s;
 
-	if (size == 0)
+	if (str == NULL)
+        {
+                return (NULL);
+        }
+	j = 0;
+	while (str[j] != '\0')
+		j++;
+	s = malloc(sizeof(char) * (j + 1));
+	if (s == NULL)
 	{
 		return (NULL);
 	}
-	i = malloc(sizeof(char) * size);
-	if (i == NULL)
-	{
-		return (NULL);
-	}
-	for (j = 0; j < size; j++)
-	{
-		*(i + j) = c;
-	}
-	return (i);
+	for (i = 0; str[i] != '\0'; i++)
+		s[i] = str[i];
+	s[i] = '\0';
+	return (s);
 }
