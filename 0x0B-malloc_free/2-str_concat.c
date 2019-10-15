@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdup - Function that concatenates two strings.
+ * str_concat - Function that concatenates two strings.
  * @s1:First array.
  * @s2: second array.
  * Return: Return NULL if str and s1/s2 is null.
