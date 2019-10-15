@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdup - Function that returns a pointer to a newly allocated in memory.
- * @str:  Size of the array.
- * Return: Return NULL if str and s is null
+ * _strdup - Function that concatenates two strings.
+ * @s1:First array.
+ * @s2: second array.
+ * Return: Return NULL if str and s1/s2 is null.
  **/
 char *str_concat(char *s1, char *s2)
 {
