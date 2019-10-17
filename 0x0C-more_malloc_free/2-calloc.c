@@ -2,10 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * string_nconcat - Function that concatenates two strings.
- * @s1:First array.
- * @s2: second array.
- * @n: number of letters to copy.
+ * _calloc - Function that allocates memory for an array, using malloc.
+ * @nmemb: Number of members.
+ * @size: Size.
  * Return: Return NULL if str and s1/s2 is null.
  **/
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -26,7 +25,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for(i = 0; i < (nmemb * size); i++)
+	for (i = 0; i < (nmemb * size); i++)
 	{
 		s[i] = 0;
 	}
