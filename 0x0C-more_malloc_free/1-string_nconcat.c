@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * @n: number of letters to copy.
- * str_concat - Function that concatenates two strings.
+ * string_nconcat - Function that concatenates two strings.
  * @s1:First array.
  * @s2: second array.
+ * @n: number of letters to copy.
  * Return: Return NULL if str and s1/s2 is null.
  **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= j)
 	{
-                n = j;
+		n = j;
 	}
 	s = malloc(sizeof(*s) * (i + n + 1));
 	if (s == NULL)
