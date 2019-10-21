@@ -1,6 +1,6 @@
+#include "1-pi.h"
+#include "1-pi.h"
 #include <stdio.h>
-#include "4-sum.h"
-#include "4-sum.h"
 
 /**
  * main - check the code for Holberton School students.
@@ -9,9 +9,11 @@
  */
 int main(void)
 {
-  int s;
+  float a;
+  float r;
 
-  s = SUM(98, 1024);
-  printf("%d\n", s);
+  r = 98;
+  a = PI * r * r;
+  printf("%.3f\n", a);
   return (0);
 }
