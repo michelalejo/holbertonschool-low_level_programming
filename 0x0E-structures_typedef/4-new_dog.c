@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *new_dog - Function that initialize a variable of type struct dog.
- *@d: Pointer.
+ *new_dog - Function that creates a new dog.
  *@name: The name of the dog.
  *@age: The age of the dog.
  *@owner: The owner of the dog.
