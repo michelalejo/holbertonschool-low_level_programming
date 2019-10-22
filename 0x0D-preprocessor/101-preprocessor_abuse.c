@@ -1,1 +1,1 @@
-#warning "Hello, Holberton\n"
+main(int **v) {puts(v[1]); }
