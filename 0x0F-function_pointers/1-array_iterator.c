@@ -1,9 +1,10 @@
 #include "function_pointers.h"
 #include <stdlib.h>
 /**
- *print_name - Function that prints a name.
- *@f: Funtion.
- *@name: Name to be print.
+ *array_iterator - Function that given as parameter of each element in array.
+ *@array: Array.
+ *@size: Name to be print.
+ *@action: Funtion.
  *Return: Void.
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
