@@ -4,7 +4,7 @@
  *int_index - Function that given as parameter of each element in array.
  *@array: Array.
  *@size: Name to be print.
- *@cpm: Funtion.
+ *@cmp: Funtion.
  *Return: If size > -1.
  */
 int int_index(int *array, int size, int (*cmp)(int))
