@@ -6,13 +6,16 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int sum_them_all(const unsigned int n, ...)
 {
-	int sum;
+	va_list s;
+	unsigned int i, j = 0;
 
-	sum = sum_them_all(2, 98, 1024);
-	printf("%d\n", sum);
-	sum = sum_them_all(4, 98, 1024, 402, -1024);
-	printf("%d\n", sum);
-	return (0);
+	if (n == 0)
+		return (0);
+	va_start (s, n);
+	for (i = 0; i < n; i++)
+		j += va_arg (s, unsigned int);
+	va_end (s);
+	return (j);
 }
