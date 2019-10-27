@@ -5,7 +5,7 @@
  * print_numbers - Function that prints numbers, followed by a new line.
  *@n: Number of integers passed to the function.
  *@separator: String to be printed between numbers.
- * Return: Always 0.
+ * Return: Void.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
