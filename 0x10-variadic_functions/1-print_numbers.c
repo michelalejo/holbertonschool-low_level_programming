@@ -6,16 +6,19 @@
  *
  * Return: Always 0.
  */
-int sum_them_all(const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list s;
-	unsigned int i, j = 0;
+        va_list s;
+        unsigned int i;
 
-	if (n == 0)
-		return (0);
-	va_start (s, n);
+	va_start(s, n);
 	for (i = 0; i < n; i++)
-		j += va_arg (s, unsigned int);
-	va_end (s);
-	return (j);
+	{
+		printf("%d", va_arg(s, int));
+		if (i != n -1 && separator != NULL)
+			printf("%s", separator);
+
+	}
+	printf("\n");
+	va_end(s);
 }
