@@ -2,19 +2,16 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_strings - Function that prints strings, followed by a new line.
- *@n: Number of integers passed to the function.
- *@separator: String to be printed between numbers.
+ * print_all - Function that prints anything.
+ *@format: A list of types of arguments passed to the function.
  * Return: Void
  */
 void print_all(const char * const format, ...)
 {
 	va_list l;
-	unsigned int i, j;
+	unsigned int i = 0, j = 1;
 	char *x;
 
-	i = 0;
-	j = 1;
 	while (format)
 	{
 		va_start(l, format);
