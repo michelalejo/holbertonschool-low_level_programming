@@ -3,10 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * add_node - Function that adds nodes at the beginning of list_t list
+ * free_list - Function that frees a list_t list.
  * @head: Pointer to head.
- * @str: Pointer to str.
- * Return: The elements it prints.
+ * Return: Void.
  */
 void free_list(list_t *head)
 {

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * add_node - Function that adds nodes at the beginning of list_t list
+ * add_node_end - Function that adds a new node at the end of a list_t.
  * @head: Pointer to head.
  * @str: Pointer to str.
  * Return: The elements it prints.
