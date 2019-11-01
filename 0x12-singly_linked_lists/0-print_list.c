@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-*
-*
-*
-*/
+ * print_list - Function that prints all the elements of a list_t list.
+ * @h: Pointer to head.
+ *return: The elements it prints.
+ */
 size_t print_list(const list_t *h)
 {
         size_t i = 0;
