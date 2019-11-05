@@ -5,11 +5,11 @@
 
 /**
  * add_nodeint - Function that adds a node on beginning of listint_t.
- *@h: Head.
+ *@head: Head.
  *@n: Numbers.
- * Return: N of nodes.
+ * Return: address of nodes.
  */
- listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *a = malloc(sizeof(listint_t));
 
