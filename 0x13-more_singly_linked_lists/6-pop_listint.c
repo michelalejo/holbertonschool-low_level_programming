@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that adds a node on beginning of listint_t.
+ * pop_listint - Function that deletes the head node of a listint_t.
  *@head: Head.
- * Return: address of nodes.
+ * Return: head node data.
  */
 int pop_listint(listint_t **head)
 {
