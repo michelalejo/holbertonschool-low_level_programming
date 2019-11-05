@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that adds a new node at the beginning of a listint_t.
+ * add_nodeint - Function that adds a node on beginning of listint_t.
  *@h: Head.
  *@n: Numbers.
  * Return: N of nodes.
