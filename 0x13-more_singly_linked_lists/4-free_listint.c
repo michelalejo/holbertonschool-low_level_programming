@@ -4,22 +4,21 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that adds a node on beginning of listint_t.
+ * free_listint - Function that frees a listint_t list.
  *@head: Head.
- *@n: Numbers.
  * Return: address of nodes.
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+void free_listint(listint_t *head)
 {
-	listint_t *a = malloc(sizeof(listint_t));
+        if (!head)
+{
+                return;
+}
 
-	if (a == NULL)
-	{
-		return (NULL);
-	}
-	a->n = n;
-	a->next = *head;
-	*head = a;
+        if (head->next)
+{
+                free_list(head->next);
+}
 
-	return (*head);
+        free(head);
 }
