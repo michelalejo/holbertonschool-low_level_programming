@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * print_listint - check the code for Holberton School students.
+ * listint_len - Function that return the number of elements on linked listint_t.
  *@h: Head.
  * Return: N of nodes.
  */
