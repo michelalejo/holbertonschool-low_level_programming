@@ -27,7 +27,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	{
 		b = *head;
 		while (b->next != NULL)
+		{
 			b = b->next;
+		}
 		b->next = a;
 	}
 	return (*head);
