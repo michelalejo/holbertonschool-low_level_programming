@@ -4,7 +4,20 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
+ * print_listint - check the code for Holberton School students.
+ *@h: Head.
+ * Return: void
+ size_t print_listint(const listint_t *h)
+{
+	listint_t *a = h;
+	int b;
+
+	while (a != NULL)
+	{
+		printf("%d", a->n)
+		a = a->next
+		b++;
+	}
+	printf("\n"))
+	return (b);
+}
