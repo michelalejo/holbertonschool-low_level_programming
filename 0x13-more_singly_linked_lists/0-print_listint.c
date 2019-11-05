@@ -6,17 +6,17 @@
 /**
  * print_listint - check the code for Holberton School students.
  *@h: Head.
- * Return: void
+ * Return: N of nodes.
+ */
  size_t print_listint(const listint_t *h)
 {
-	int b;
+	int b = 0;
 
 	while (h != NULL)
 	{
-		printf("%d", h->n)
-		h = h->next
+		printf("%d\n", h->n);
+		h = h->next;
 		b++;
 	}
-	printf("\n"))
 	return (b);
 }
