@@ -6,20 +6,17 @@
 /**
  * add_nodeint - Function that adds a node on beginning of listint_t.
  *@head: Head.
- *@n: Numbers.
  * Return: address of nodes.
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+int pop_listint(listint_t **head)
 {
-	listint_t *a = malloc(sizeof(listint_t));
+	int a;
 
-	if (a == NULL)
-	{
-		return (NULL);
-	}
-	a->n = n;
-	a->next = *head;
-	*head = a;
+	if (!head || !(*head))
+		return (0);
 
-	return (*head);
+	a = (*head)->n;
+	free(*head);
+	*head = (*head)->next;
+	return (a);
 }
