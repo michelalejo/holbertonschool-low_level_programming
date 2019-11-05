@@ -4,12 +4,12 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that adds a node on beginning of listint_t.
+ * add_nodeint_end - Function that adds a node on the end of listint_t.
  *@head: Head.
  *@n: Numbers.
  * Return: address of nodes.
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *a = malloc(sizeof(listint_t));
 
