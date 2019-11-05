@@ -4,8 +4,9 @@
 #include "lists.h"
 
 /**
- * listint_len - Function that return the number of elements on listint_t.
+ * add_nodeint - Function that adds a new node at the beginning of a listint_t.
  *@h: Head.
+ *@n: Numbers.
  * Return: N of nodes.
  */
  listint_t *add_nodeint(listint_t **head, const int n)
