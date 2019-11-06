@@ -4,22 +4,22 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that adds a node on beginning of listint_t.
+ * sum_listint - Function that the summ of all data(n).
  *@head: Head.
- *@n: Numbers.
  * Return: address of nodes.
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+int sum_listint(listint_t *head)
 {
-	listint_t *a = malloc(sizeof(listint_t));
+	int i;
 
-	if (a == NULL)
-	{
-		return (NULL);
-	}
-	a->n = n;
-	a->next = *head;
-	*head = a;
+	i = 0;
 
-	return (*head);
+	if (!head)
+		return (i);
+
+	if (head->next)
+		i += sum_listint(head->next);
+
+	i += head->n;
+	return (i);
 }
