@@ -6,44 +6,35 @@
 /**
  * add_nodeint - Function that adds a node on beginning of listint_t.
  *@head: Head.
- *@n: Numbers.
+ *@index: Indexs.
  * Return: address of nodes.
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i;
-	listint_t *tmp;
+	listint_t *a, *b;
 
-	if (!head || !(*head))
-		return (-1);
+	i = 0;
+	b = *head;
+	a = malloc(sizeof(listint_t));
+	if (a == NULL)
 
-	if (index == 0)
-	{
-		if (!((*head)->next))
+		if (index == 0)
 		{
-			free(*head);
-			*head = NULL;
-			return (1);
+			a->next = b;
+			*head = a;
 		}
-		free(*head);
-		*head = (*head)->next;
-		return (1);
-	}
 
-	tmp = *head;
-
-	for (i = 0; tmp && i < index; i++)
+	while (i < (index - 1))
 	{
-		if (i == index - 1)
+		if (b == NULL)
 		{
-			if (tmp->next)
-			{
-				free(tmp->next);
-				tmp->next = (tmp->next)->next;
-				return (1);
-			}
+			free(a);
 		}
-		tmp = tmp->next;
+		b = b->next;
+		i++;
 	}
-	return (-1);
+	a->next = b->next;
+	b->next = a;
+	return (0);
 }
