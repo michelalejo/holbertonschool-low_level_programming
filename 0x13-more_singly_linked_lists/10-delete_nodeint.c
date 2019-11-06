@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that adds a node on beginning of listint_t.
+ * delete_nodeint_at_index - Function that delete a node at index of listint_t.
  *@head: Head.
  *@index: Indexs.
  * Return: address of nodes.
