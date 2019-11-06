@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that returns the nth node of a listint_t.
+ * get_nodeint_at_index - Function that returns the nth node of a listint_t.
  *@head: Head.
  *@index: Indexs.
  * Return: address of nodes.
