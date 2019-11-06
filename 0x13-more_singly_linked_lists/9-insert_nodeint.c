@@ -4,22 +4,41 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that adds a node on beginning of listint_t.
+ * add_nodeint - Function that inserts a node at a given position
  *@head: Head.
+ *@idx: indexs.
  *@n: Numbers.
  * Return: address of nodes.
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *a = malloc(sizeof(listint_t));
+	unsigned int i = 0;
+	listint_t *a, *b;
 
+	node = *head;
+	a = malloc(sizeof(listint_t));
 	if (a == NULL)
-	{
 		return (NULL);
-	}
-	a->n = n;
-	a->next = *head;
-	*head = a;
 
-	return (*head);
+	a->n = n;
+	if (idx == 0)
+	{
+		a->next = b;
+		*head = a;
+		return (a;
+	}
+
+	while (i < (idx - 1))
+	{
+		if (b == NULL)
+		{
+			free(a);
+			return (NULL);
+		}
+		b = b->next;
+		i++;
+	}
+		a->next = b->next;
+		b->next = a;
+		return (a);
 }
