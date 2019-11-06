@@ -9,17 +9,21 @@
  *@n: Numbers.
  * Return: address of nodes.
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *a = malloc(sizeof(listint_t));
+	listint_t *a;
+	unsigned int b;
 
-	if (a == NULL)
+	i = 0;
+	a = head;
+	if (head != NULL)
 	{
-		return (NULL);
+		while (a && b < index)
+		{
+			a = a->next;
+			b++;
+		}
+		return (a);
 	}
-	a->n = n;
-	a->next = *head;
-	*head = a;
-
-	return (*head);
+	return (0);
 }
