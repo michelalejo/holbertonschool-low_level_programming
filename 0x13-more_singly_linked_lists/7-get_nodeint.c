@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Function that adds a node on beginning of listint_t.
+ * add_nodeint - Function that returns the nth node of a listint_t.
  *@head: Head.
- *@n: Numbers.
+ *@index: Indexs.
  * Return: address of nodes.
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
