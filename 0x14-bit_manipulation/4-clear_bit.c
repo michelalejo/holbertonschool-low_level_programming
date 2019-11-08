@@ -3,12 +3,12 @@
 #include <math.h>
 
 /**
- * set_bit - Function that sets value of a bit to 1 a given index.
+ * set_bit - Function that sets the value of a bit to 0 given index.
  *@n: N.
  *@index: Index.
  * Return: 1 or -1.
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	if (index > 63)
 	{
