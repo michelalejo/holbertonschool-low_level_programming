@@ -3,9 +3,9 @@
 #include <math.h>
 
 /**
- * binary_to_uint - Funtion that converrts binary to decimal..
- *@b: Binary numbers.
- * Return: Decimal numbers.
+ * print_binary - Function that prints the binary representation.
+ *@n: Binary numbers.
+ * Return: Void.
  */
 void print_binary(unsigned long int n)
 {
