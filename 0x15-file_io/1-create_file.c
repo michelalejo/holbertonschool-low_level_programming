@@ -7,13 +7,13 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int f, s, i;
+	int f, d, i;
 
 
 	if (filename == NULL)
 		return (-1);
 
-	f = open(filename, O_CREAT | O_TURNC | O_WRONLY, 0600);
+	f = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 
 	if (f == -1)
 	{
@@ -26,8 +26,8 @@ int create_file(const char *filename, char *text_content)
 	{
 	}
 
-	s = write(f, text_content, i);
-	if (s == -1)
+	d = write(f, text_content, i);
+	if (d == -1)
 	{
 		close(f);
 		return (1);
