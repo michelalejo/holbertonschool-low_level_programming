@@ -9,7 +9,6 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int f, d, i;
 
-
 	if (filename == NULL)
 		return (-1);
 
@@ -30,7 +29,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (d == -1)
 	{
 		close(f);
-		return (1);
+		return (-1);
 	}
 
 	close(f);
