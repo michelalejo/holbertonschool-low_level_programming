@@ -13,7 +13,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	f = open(filename, O_APPEND | O_TRUNC);
+	f = open(filename, O_APPEND | O_WRONLY);
 
 	if (f == -1)
 	{
