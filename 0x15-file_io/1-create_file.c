@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	f = open(filename, O_CREAT | O_WRONLY, 0600);
+	f = open(filename, O_CREAT | O_TURNC | O_WRONLY, 0600);
 
 	if (f == -1)
 	{
@@ -30,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 	if (s == -1)
 	{
 		close(f);
-		return (0);
+		return (1);
 	}
 
 	close(f);
