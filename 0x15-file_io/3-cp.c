@@ -26,20 +26,19 @@ int main(int argc, char *argv[])
 	}
 	do {
 	i = read(one, buffer, 1024);
-	if (i == -1)
-	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
 	j = write(two, buffer, i);
+	} while (i > 0);
+	if (i == -1)
+        {dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+                exit(98);
+	}
 	if (j <= -1)
 	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	} while (i > 0);
 	if (close(one) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", one), exit(100);
 	if (close(two) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", two), exit(100);
-
 	return (0);
-
 }
