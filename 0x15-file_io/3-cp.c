@@ -2,7 +2,7 @@
 /**
  * main - Program that copies the content of a file to another file.
  * @argc: Argc.
- * @argv: Argv.
+ * @argv: Argv
  * Return: 0 on success.
  */
 int main(int argc, char *argv[])
