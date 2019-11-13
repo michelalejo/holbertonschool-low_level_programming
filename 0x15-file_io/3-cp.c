@@ -15,23 +15,22 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	one = open(argv[1], O_RDONLY);
-	if (one <= -1)
+	if (one == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	two = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	if (two <= -1)
+	if (two == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	do {
 	i = read(one, buffer, 1024);
-	if (i <= -1)
+	if (i == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
-	}
 	j = write(two, buffer, i);
-	if (j == -1)
+	if (j <= -1)
 	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
