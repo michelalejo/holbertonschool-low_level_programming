@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 	}
 	two = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (two == -1)
-	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
-		exit(98);
+	{dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+		exit(99);
 	}
 	do {
 	i = read(one, buffer, 1024);
