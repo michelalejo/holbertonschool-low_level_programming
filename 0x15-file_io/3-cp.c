@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char buffer[1024];
+	char buffer[BSIZE];
 	int one, two, i, j;
 
 	if (argc != 3)
@@ -25,12 +25,12 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	do {
-	i = read(one, buffer, 1024);
+	i = read(one, buffer, BSIZE);
 	j = write(two, buffer, i);
-	} while (i > 0);
+	} while (i == BSIZE);
 	if (i == -1)
-        {dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-                exit(98);
+	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (j <= -1)
 	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
