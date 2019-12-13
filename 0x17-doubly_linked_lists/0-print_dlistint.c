@@ -5,16 +5,14 @@
  * @n: Item to be created and added to the list.
  * Return: The new node.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *new;
+	int count = 0;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = *head;
-	new->prev = NULL;
-	*head = new;
-	return (new);
+	for(count = 0; h != NULL; count++)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
+	return (count);
 }
