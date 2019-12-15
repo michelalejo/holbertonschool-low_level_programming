@@ -1,20 +1,23 @@
 #include "lists.h"
 /**
- * add_dnodeint - Funtion that adds a new node at the beginning of a list.
+ * get_dnodeint_at_index - Function that returns the nth node of a list.
  * @head: Head of the list.
- * @n: Item to be created and added to the list.
- * Return: The new node.
+ * @index: Place of the list.
+ * Return: Head or NULL.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *new;
+	unsigned int count;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = *head;
-	new->prev = NULL;
-	*head = new;
-	return (new);
+	count = 0;
+	if (head != NULL)
+	{
+		while (count < index && head != NULL)
+		{
+			head = head->next;
+			count++;
+		}
+		return (head);
+	}
+	return (NULL);
 }
