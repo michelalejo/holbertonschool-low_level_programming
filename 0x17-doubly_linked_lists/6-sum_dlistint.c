@@ -1,20 +1,21 @@
 #include "lists.h"
 /**
- * add_dnodeint - Funtion that adds a new node at the beginning of a list.
+ * sum_dlistint - Function that returns the sum of all the data (n) of a list.
  * @head: Head of the list.
- * @n: Item to be created and added to the list.
- * Return: The new node.
+ * Return: Sume of the list or 0.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+int sum_dlistint(dlistint_t *head)
 {
-	dlistint_t *new;
+	int sum = 0;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = *head;
-	new->prev = NULL;
-	*head = new;
-	return (new);
+	if (head != NULL)
+	{
+		while (head != NULL)
+		{
+			sum = sum + head->n;
+			head = head->next;
+		}
+		return (sum);
+	}
+	return (0);
 }
