@@ -1,20 +1,54 @@
 #include "lists.h"
 /**
- * add_dnodeint - Funtion that adds a new node at the beginning of a list.
- * @head: Head of the list.
+ * insert_dnodeint_at_index - Function that inserts a new node in a position.
+ * @h: Head of the list.
+ * @idx: Index.
  * @n: Item to be created and added to the list.
  * Return: The new node.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new;
+	dlistint_t *new, *temp, *prev = *h;
+	unsigned int count;
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
-	new->n = n;
-	new->next = *head;
-	new->prev = NULL;
-	*head = new;
-	return (new);
+	if (h == NULL)
+		return (0);
+	if (*h == NULL)
+	{
+		new->n = n;
+		new->next = NULL;
+		new->prev = NULL;
+		*h = new;
+		return (new);
+	}
+	for (count = 0; prev != NULL && count < idx; count++)
+	{
+		temp = prev;
+		prev = prev->next;
+	}
+	if (prev != NULL || count == idx)
+	{
+		new->n = n;
+		if (idx != 0)
+		{
+			new->next = prev;
+			new->prev = temp;
+			temp->next = new;
+			if (prev != NULL)
+				prev->prev = new;
+		}
+		else
+		{
+			new->next = *h;
+                        new->prev = NULL;
+                        if (*h != NULL)
+                                (*h)->prev = new;
+                        *h = new;
+		}
+		return (new);
+	}
+	return (NULL);
 }
