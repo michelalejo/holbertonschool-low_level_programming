@@ -1,20 +1,39 @@
 #include "lists.h"
 /**
- * add_dnodeint - Funtion that adds a new node at the beginning of a list.
+ * delete_dnodeint_at_index - Function that deletes the node at index of a list.
  * @head: Head of the list.
- * @n: Item to be created and added to the list.
- * Return: The new node.
+ * @idx: Index.
+ * Return: 1 or -1.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *new;
+	dlistint_t *head2, h;
+	unsigned int i = 0;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = *head;
-	new->prev = NULL;
-	*head = new;
-	return (new);
+	old = *head;
+	if (old == NULL)
+		return (-1);
+	for (; i < index
+		     && old != NULL; i++,
+		     h = old, old = old->next)
+		;
+	if (old != NULL)
+	{
+		free(old);
+		old = old->next;
+		if (i != 0)
+		{
+			if (old != NULL)
+				old->prev = h;
+			h->next = old;
+		}
+		else
+		{
+			if (head2 != NULL)
+				head2->prev = NULL;
+			*head = head2;
+		}
+		return (1);
+	}
+	return (-1);
 }
