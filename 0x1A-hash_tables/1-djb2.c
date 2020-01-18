@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * hash_djb2 - Function implementing the djb2 algorithm.
+ * @str: String.
+ * Return: Djb2 hash.
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
