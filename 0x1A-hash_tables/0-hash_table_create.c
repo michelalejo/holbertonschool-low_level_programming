@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * hash_table_create - Function that creates a hash table.
+ * @size: Size of the array.
+ * Return: Returns a pointer to the newly created hash table or NULL.
  */
  hash_table_t *hash_table_create(unsigned long int size)
 {
