@@ -1,3 +1,5 @@
+#ifndef HASH_HEADER
+#define HASH_HEADER
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -31,3 +33,4 @@ typedef struct hash_table_s
      hash_node_t **array;
 } hash_table_t;
 
+#endif
