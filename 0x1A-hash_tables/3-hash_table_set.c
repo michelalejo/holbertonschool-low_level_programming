@@ -11,18 +11,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int idx = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *new, *n_two;
 
-	if (ht == NULL || key == NULL || value == NULL)
+	if (key == NULL || ht == NULL || value == NULL)
 		return (0);
 
-	new = ht->array[idx];
-	while (new != NULL)
+	new = ht->array[i];
+	while (new)
 	{
 		if (strcmp(new->key, key) == 0)
 		{
 			free(new->value);
 			new->value = strdup(value);
-			if (new->value != NULL)
-				return (1);
+			if (new->value == NULL)
+				return (0);
 			return (1);
 		}
 		new = new->next;
