@@ -7,6 +7,12 @@
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	(void) key;
-	(void) size;
+	unsigned long int key_idx;
+
+	if (size == 0 || key == NULL)
+		return (0);
+
+	key_idx = (hash_djb2(key) % size);
+
+	return (key_idx);
 }
