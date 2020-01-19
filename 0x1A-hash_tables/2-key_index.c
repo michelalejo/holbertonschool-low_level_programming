@@ -9,7 +9,10 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int key_idx;
 
-	if (size == 0 || key == NULL)
+	if (key == NULL)
+		return (0);
+
+	if (size == 0)
 		return (0);
 
 	key_idx = (hash_djb2(key) % size);
