@@ -8,8 +8,8 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int slot = key_index((const unsigned char *)key, ht->size);
-	hash_node_t *new = ht->array[slot];
+	unsigned long int idx = key_index((const unsigned char *)key, ht->size);
+	hash_node_t *new = ht->array[idx];
 
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
