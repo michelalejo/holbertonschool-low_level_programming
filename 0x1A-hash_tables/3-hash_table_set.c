@@ -35,7 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (n_two->key == NULL  || n_two->value == NULL)
 		return (0);
-	n_two->next = ht->array[i];
+	n_two->next = ht->array[idx];
 	ht->array[i] = n_two;
 
 	return (1);
