@@ -1,10 +1,9 @@
 #include "hash_tables.h"
 /**
- * hash_table_set - Function that adds an element to the hash table.
+ * hash_table_get - Function that retrieves a value associated with a key.
  * @ht: Hash table you want to add or update.
  * @key: The key.
- * @value: The value associated with the key. value must be duplicated.
- * Return: 1 if it succeeded, otherwise 0.
+ * Return: The value in the idx,, otherwise NULL.
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
