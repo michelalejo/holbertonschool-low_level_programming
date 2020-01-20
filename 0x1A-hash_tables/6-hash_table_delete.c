@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * hash_table_delete - Function that deletes a hash table.
  * @ht: Hash table you want to add or update.
