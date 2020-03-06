@@ -3,6 +3,7 @@
 #include <stdlib.h>
 /**
  * _realloc - Function that give new space of memory.
+ * @ptr: Oldpointer that will be change.
  * @new_size: New size.
  * @old_size: Old size.
  * Return: Return NULL or the new pointer to the space of memory.
